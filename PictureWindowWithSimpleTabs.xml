@@ -310,7 +310,7 @@ a:hover {
 
 /* Headings
 ----------------------------------------------- */
-h2 {
+h4 {
   font: $(widget.title.font);
   text-transform: $(widget.title.text.transform);
   color: $(widget.title.text.color);
@@ -355,8 +355,10 @@ h2 {
 /* Posts
 ----------------------------------------------- */
 h3.post-title {
+  font-size: 200%;
+  color: #669999;
   margin: 0;
-  font: $(post.title.font);
+/* font: $(post.title.font); */
 }
 
 .comments h4 {
@@ -383,7 +385,7 @@ h3.post-title {
 
 .post-body {
   line-height: 1.4;
-  font-size: 110%;
+  font-size: 120%;
   position: relative;
 }
 
@@ -605,9 +607,9 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 }]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1010px'/>
-      <b:variable default='0' name='main.column.left.width' type='length' value='150px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='230px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1140px'/>
+      <b:variable default='0' name='main.column.left.width' type='length' value='160px'/>
+      <b:variable default='310px' name='main.column.right.width' type='length' value='240px'/>
 
       <![CDATA[
       body {
@@ -672,7 +674,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
-    <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
+    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -774,7 +776,7 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='Coding がぴょんぴょんする (Header)' type='Header'>
+        <b:widget id='Header1' locked='false' title='Coding がぴょんぴょんする (Header)' type='Header'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -851,6 +853,52 @@ head.appendChild(script);
       <div class='cap-right'/>
     </div>
     </div>
+
+
+<style type='text/css'>
+/*程式碼高亮設定*/
+/*main box*/
+.pre-highborder{
+ border: 1px solid #ff0000;
+ padding: 3px 3px 3px 0;
+}
+pre.prettyprint, code.prettyprint {
+ border-radius: 8px;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ padding: 5px;
+ background-color: #eee !important;
+ box-shadow: 0 0 5px #999;
+ -moz-box-shadow: 0 0 5px #999;
+ -webkit-box-shadow: 0 0 5px #999;
+}
+/*font*/
+pre span, code span {
+ /*font-family: &#39;monospace&#39;, &#39;Courier New&#39;, &#39;Microsoft JhengHei&#39;, sans-serif !important;
+ font-size: 12px !important;*/
+}
+/*each line*/
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
+ margin: 0 !important;
+ padding: 2px 0 2px 4px !important;
+ list-style-type:decimal !important;
+ border-left: 1px solid #999;
+}
+/*even line*/
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+ background-color: #f6f6f6 !important;
+}
+/*odd line*/
+li.L0, li.L2, li.L4, li.L6, li.L8 {
+ background-color: #FFF !important;
+}
+/*line-number background color*/
+ol.linenums {
+ background-color: #eee;
+ margin-left: 4px;
+}
+</style>
+
     </header>
 
     <div class='tabs-outer'>
@@ -951,7 +999,7 @@ head.appendChild(script);
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' showaddelement='no'>
-            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
               <b:includable id='main' var='top'>
   <b:if cond='data:mobile == &quot;false&quot;'>
 
@@ -1943,14 +1991,14 @@ head.appendChild(script);
     <div class='fauxborder-right footer-fauxborder-right'/>
     <div class='region-inner footer-inner'>
       <macro:include id='footer-sections' name='sections'>
-        <macro:param default='2' name='num'/>
+        <macro:param default='2' name='num' value='3'/>
         <macro:param default='footer' name='idPrefix'/>
         <macro:param default='foot' name='class'/>
         <macro:param default='false' name='includeBottom'/>
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' showaddelement='no'>
-        <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
+        <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
           <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
       <div class='mobile-survey-link' style='text-align: center;'>
@@ -1992,6 +2040,15 @@ head.appendChild(script);
         document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
       }, 10);
   </script>
+
+
+    <script src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;lang=basic&amp;lang=css&amp;lang=sql'/>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js'/>
+    <script type='text/javascript'>
+    $(&quot;pre&quot;).each(function(){
+        $(this).addClass(&#39;prettyprint&#39;).addClass(&#39;linenums&#39;);
+    });
+    </script>
 </body>
 
 <macro:includable id='sections' var='col'>
@@ -2033,7 +2090,51 @@ head.appendChild(script);
   </macro:if>
 </macro:includable>
 
-<b:section-contents id='sidebar-left-1'/><b:section-contents id='sidebar-right-1'>
+<b:section-contents id='sidebar-left-1'>
+  <b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
+    <b:includable id='main'>
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2><data:title/></h2>
+    </b:if>
+    <div class='widget-content'>
+    <b:if cond='data:team == &quot;true&quot;'> <!-- team blog profile -->
+      <ul>
+        <b:loop values='data:authors' var='i'>
+          <li><a class='profile-name-link g-profile' expr:href='data:i.userUrl' expr:style='&quot;background-image: url(&quot; + data:i.profileLogo + &quot;);&quot;'><data:i.display-name/></a></li>
+        </b:loop>
+      </ul>
+
+    <b:else/> <!-- normal blog profile -->
+
+      <b:if cond='data:photo.url != &quot;&quot;'>
+        <a expr:href='data:userUrl'><img class='profile-img' expr:alt='data:photo.alt' expr:height='data:photo.height' expr:src='data:photo.url' expr:width='data:photo.width'/></a>
+      </b:if>
+
+      <dl class='profile-datablock'>
+        <dt class='profile-data'>
+          <a class='profile-name-link g-profile' expr:href='data:userUrl' expr:style='&quot;background-image: url(&quot; + data:profileLogo + &quot;);&quot;' rel='author'>
+            <data:displayname/>
+          </a>
+          <b:if cond='data:hasgoogleprofile'>
+            <br/>
+            <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
+          </b:if>
+        </dt>
+
+        <b:if cond='data:showlocation == &quot;true&quot;'>
+          <dd class='profile-data'><data:location/></dd>
+        </b:if>
+
+        <b:if cond='data:aboutme != &quot;&quot;'><dd class='profile-textblock'><data:aboutme/></dd></b:if>
+      </dl>
+      <a class='profile-link' expr:href='data:userUrl' rel='author'><data:viewProfileMsg/></a>
+    </b:if>
+
+     <b:include name='quickedit'/>
+    </div>
+  </b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='sidebar-right-1'>
   <b:widget id='CustomSearch1' locked='false' title='Search This Blog' type='CustomSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
@@ -2297,47 +2398,4 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
-    <b:includable id='main'>
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2><data:title/></h2>
-    </b:if>
-    <div class='widget-content'>
-    <b:if cond='data:team == &quot;true&quot;'> <!-- team blog profile -->
-      <ul>
-        <b:loop values='data:authors' var='i'>
-          <li><a class='profile-name-link g-profile' expr:href='data:i.userUrl' expr:style='&quot;background-image: url(&quot; + data:i.profileLogo + &quot;);&quot;'><data:i.display-name/></a></li>
-        </b:loop>
-      </ul>
-
-    <b:else/> <!-- normal blog profile -->
-
-      <b:if cond='data:photo.url != &quot;&quot;'>
-        <a expr:href='data:userUrl'><img class='profile-img' expr:alt='data:photo.alt' expr:height='data:photo.height' expr:src='data:photo.url' expr:width='data:photo.width'/></a>
-      </b:if>
-
-      <dl class='profile-datablock'>
-        <dt class='profile-data'>
-          <a class='profile-name-link g-profile' expr:href='data:userUrl' expr:style='&quot;background-image: url(&quot; + data:profileLogo + &quot;);&quot;' rel='author'>
-            <data:displayname/>
-          </a>
-          <b:if cond='data:hasgoogleprofile'>
-            <br/>
-            <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
-          </b:if>
-        </dt>
-
-        <b:if cond='data:showlocation == &quot;true&quot;'>
-          <dd class='profile-data'><data:location/></dd>
-        </b:if>
-
-        <b:if cond='data:aboutme != &quot;&quot;'><dd class='profile-textblock'><data:aboutme/></dd></b:if>
-      </dl>
-      <a class='profile-link' expr:href='data:userUrl' rel='author'><data:viewProfileMsg/></a>
-    </b:if>
-
-     <b:include name='quickedit'/>
-    </div>
-  </b:includable>
-  </b:widget>
-</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/></html>
+</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/><b:section-contents id='footer-2-3'/></html>
