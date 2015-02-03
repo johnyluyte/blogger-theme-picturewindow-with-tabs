@@ -157,7 +157,7 @@ html body .region-inner {
 }
 
 .content-outer {
-  font-size: 100%;
+  font-size: 90%;
 }
 
 a:link {
@@ -385,7 +385,7 @@ h3.post-title {
 
 .post-body {
   line-height: 1.4;
-  font-size: 120%;
+  font-size: 130%;
   position: relative;
 }
 
@@ -855,7 +855,12 @@ head.appendChild(script);
     </div>
 
 
+
+
 <style type='text/css'>
+body{
+ font-family: &#39;Microsoft YaHei&#39;, &#39;Microsoft JhengHei&#39;, &#39;Arial&#39;, sans-serif !important;
+}
 /*程式碼高亮設定*/
 /*main box*/
 .pre-highborder{
@@ -874,8 +879,9 @@ pre.prettyprint, code.prettyprint {
 }
 /*font*/
 pre span, code span {
- /*font-family: &#39;monospace&#39;, &#39;Courier New&#39;, &#39;Microsoft JhengHei&#39;, sans-serif !important;*/
+ /*font-family: &#39;monospace&#39;, sans-serif !important;*/
  font-size: 0.65rem !important;
+ word-wrap: normal;
 }
 /*each line*/
 li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
@@ -897,6 +903,7 @@ ol.linenums {
  background-color: #eee;
  margin-left: 6px;
 }
+
 </style>
 
     </header>
