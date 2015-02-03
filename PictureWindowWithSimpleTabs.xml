@@ -880,7 +880,7 @@ pre.prettyprint, code.prettyprint {
 /*font*/
 pre span, code span {
  /*font-family: &#39;monospace&#39;, sans-serif !important;*/
- font-size: 0.65rem !important;
+ font-size: 80%;
  word-wrap: normal;
 }
 /*each line*/
