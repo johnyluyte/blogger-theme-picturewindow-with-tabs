@@ -38,7 +38,7 @@ URL:      www.noaesthetic.com
 
    <Group description="Links" selector=".main-outer">
      <Variable name="link.color" description="Link Color" type="color" default="#336699" value="#339999"/>
-     <Variable name="link.visited.color" description="Visited Color" type="color" default="#6699cc" value="#66cccc"/>
+     <Variable name="link.visited.color" description="Visited Color" type="color" default="#6699cc" value="#118866"/>
      <Variable name="link.hover.color" description="Hover Color" type="color" default="#33aaff" value="#32ffed"/>
    </Group>
 
@@ -157,7 +157,7 @@ html body .region-inner {
 }
 
 .content-outer {
-  font-size: 90%;
+  font-size: 100%;
 }
 
 a:link {
@@ -607,7 +607,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 }]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1140px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1160px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='160px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='240px'/>
 
@@ -874,19 +874,19 @@ pre.prettyprint, code.prettyprint {
 }
 /*font*/
 pre span, code span {
- /*font-family: &#39;monospace&#39;, &#39;Courier New&#39;, &#39;Microsoft JhengHei&#39;, sans-serif !important;
- font-size: 12px !important;*/
+ /*font-family: &#39;monospace&#39;, &#39;Courier New&#39;, &#39;Microsoft JhengHei&#39;, sans-serif !important;*/
+ font-size: 0.65rem !important;
 }
 /*each line*/
 li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
  margin: 0 !important;
- padding: 2px 0 2px 4px !important;
+ padding: 1px 0 1px 4px !important;
  list-style-type:decimal !important;
  border-left: 1px solid #999;
 }
 /*even line*/
 li.L1, li.L3, li.L5, li.L7, li.L9 {
- background-color: #f6f6f6 !important;
+ background-color: #f4f4f4 !important;
 }
 /*odd line*/
 li.L0, li.L2, li.L4, li.L6, li.L8 {
@@ -895,7 +895,7 @@ li.L0, li.L2, li.L4, li.L6, li.L8 {
 /*line-number background color*/
 ol.linenums {
  background-color: #eee;
- margin-left: 4px;
+ margin-left: 6px;
 }
 </style>
 
