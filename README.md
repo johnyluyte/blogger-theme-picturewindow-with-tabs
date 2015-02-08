@@ -2,9 +2,7 @@
 
 This is the theme for my [blog](http://blogger.chunnorris.net/).
 
-## What is the feature?
-
-The theme is based on the default "Picture Window" template from [blogger](https://www.blogger.com/home), with some modification:
+It is based on the default "Picture Window" template from [blogger](https://www.blogger.com/home), with some modification:
 
 - Added a neat Dropdown menu tabs modified from [helplogger](http://helplogger.blogspot.in/2014/02/add-a-neat-css-dropdown-menu-in-blogger.html).
 
