@@ -72,7 +72,7 @@ URL:      www.noaesthetic.com
 
    <Group description="Post" selector=".post">
      <Variable name="post.footer.text.color" description="Footer Text Color" type="color" default="#999999" value="#999999"/>
-     <Variable name="post.border.color" description="Border Color" type="color" default="#dddddd" value="#dddddd"/>
+     <Variable name="post.border.color" description="Border Color" type="color" default="#888888" value="#888888"/>
    </Group>
 
    <Group description="Gadgets" selector="h2">
@@ -604,12 +604,14 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 }
 #neat-menu ul ul li:hover a {
     background-color: #ffffff;
+
+
 }]]></b:skin>
 
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1160px'/>
-      <b:variable default='0' name='main.column.left.width' type='length' value='160px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='240px'/>
+      <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
+      <b:variable default='310px' name='main.column.right.width' type='length' value='260px'/>
 
       <![CDATA[
       body {
@@ -1589,6 +1591,7 @@ ol.linenums {
       <div class='jump-link'>
         <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
       </div>
+      <hr/>
     </b:if>
 
     <div class='post-footer'>
@@ -1616,6 +1619,13 @@ ol.linenums {
           <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
         </b:if>
         </b:if>
+      </span> <span class='post-labels'>
+        <b:if cond='data:post.labels'>
+          <data:postLabelsLabel/>
+          <b:loop values='data:post.labels' var='label'>
+            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
+          </b:loop>
+        </b:if>
       </span> <span class='post-comment-link'>
         <b:if cond='data:blog.pageType != &quot;item&quot;'>
           <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
@@ -1642,14 +1652,7 @@ ol.linenums {
         </b:if>
       </div> </div>
 
-      <div class='post-footer-line post-footer-line-2'><span class='post-labels'>
-        <b:if cond='data:post.labels'>
-          <data:postLabelsLabel/>
-          <b:loop values='data:post.labels' var='label'>
-            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
-          </b:loop>
-        </b:if>
-      </span> </div>
+      <div class='post-footer-line post-footer-line-2'/>
 
       <div class='post-footer-line post-footer-line-3'><span class='post-location'>
         <b:if cond='data:top.showLocation'>
@@ -1951,7 +1954,7 @@ ol.linenums {
         <div class='column-left-inner'>
           <aside>
           <macro:include id='main-column-left-sections' name='sections'>
-            <macro:param default='0' name='num' value='1'/>
+            <macro:param default='0' name='num' value='0'/>
             <macro:param default='sidebar-left' name='idPrefix'/>
             <macro:param default='sidebar' name='class'/>
             <macro:param default='true' name='includeBottom'/>
@@ -2097,51 +2100,7 @@ ol.linenums {
   </macro:if>
 </macro:includable>
 
-<b:section-contents id='sidebar-left-1'>
-  <b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
-    <b:includable id='main'>
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2><data:title/></h2>
-    </b:if>
-    <div class='widget-content'>
-    <b:if cond='data:team == &quot;true&quot;'> <!-- team blog profile -->
-      <ul>
-        <b:loop values='data:authors' var='i'>
-          <li><a class='profile-name-link g-profile' expr:href='data:i.userUrl' expr:style='&quot;background-image: url(&quot; + data:i.profileLogo + &quot;);&quot;'><data:i.display-name/></a></li>
-        </b:loop>
-      </ul>
-
-    <b:else/> <!-- normal blog profile -->
-
-      <b:if cond='data:photo.url != &quot;&quot;'>
-        <a expr:href='data:userUrl'><img class='profile-img' expr:alt='data:photo.alt' expr:height='data:photo.height' expr:src='data:photo.url' expr:width='data:photo.width'/></a>
-      </b:if>
-
-      <dl class='profile-datablock'>
-        <dt class='profile-data'>
-          <a class='profile-name-link g-profile' expr:href='data:userUrl' expr:style='&quot;background-image: url(&quot; + data:profileLogo + &quot;);&quot;' rel='author'>
-            <data:displayname/>
-          </a>
-          <b:if cond='data:hasgoogleprofile'>
-            <br/>
-            <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
-          </b:if>
-        </dt>
-
-        <b:if cond='data:showlocation == &quot;true&quot;'>
-          <dd class='profile-data'><data:location/></dd>
-        </b:if>
-
-        <b:if cond='data:aboutme != &quot;&quot;'><dd class='profile-textblock'><data:aboutme/></dd></b:if>
-      </dl>
-      <a class='profile-link' expr:href='data:userUrl' rel='author'><data:viewProfileMsg/></a>
-    </b:if>
-
-     <b:include name='quickedit'/>
-    </div>
-  </b:includable>
-  </b:widget>
-</b:section-contents><b:section-contents id='sidebar-right-1'>
+<b:section-contents id='sidebar-right-1'>
   <b:widget id='CustomSearch1' locked='false' title='Search This Blog' type='CustomSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
