@@ -39,7 +39,7 @@ URL:      www.noaesthetic.com
    <Group description="Links" selector=".main-outer">
      <Variable name="link.color" description="Link Color" type="color" default="#336699" value="#339999"/>
      <Variable name="link.visited.color" description="Visited Color" type="color" default="#6699cc" value="#118866"/>
-     <Variable name="link.hover.color" description="Hover Color" type="color" default="#33aaff" value="#32ffed"/>
+     <Variable name="link.hover.color" description="Hover Color" type="color" default="#1669C8" value="#1669C8"/>
    </Group>
 
    <Group description="Blog Title" selector=".header h1">
@@ -52,7 +52,7 @@ URL:      www.noaesthetic.com
      <Variable name="tabs.font" description="Font" type="font"
          default="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
      <Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff" value="#ffffff"/>
-     <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="$(link.color)" value="#339999"/>
+     <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="$(link.color)" value="#1669C8"/>
    </Group>
 
    <Group description="Tabs Background" selector=".tabs-outer .PageList">
@@ -268,7 +268,7 @@ a:hover {
   margin-$endSide: $(tabs.spacing);
 
   color: $(tabs.text.color);
-  font: $(tabs.font);
+  font-size: 110%;
 
   -moz-border-radius: $(tab.border.radius) $(tab.border.radius) 0 0;
   -webkit-border-top-left-radius: $(tab.border.radius);
@@ -570,7 +570,12 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.separator.color);
 }
-#neat-menu ul ul {
+#neat-menu ul li:hover ul  {  /* Dropdown lists parent */
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+#neat-menu ul ul {   /* Dropdown lists */
     height: 0;
     /*margin-top: 1px;*/
     opacity: 0;
@@ -587,11 +592,6 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
     -o-transition: all .5s;
     transition: all .5s;
 }
-#neat-menu ul li:hover ul  {
-    height: auto;
-    opacity: 1;
-    visibility: visible;
-}
 #neat-menu ul ul li a {
     margin-top: 0;
     padding-left: 15px;
@@ -604,9 +604,8 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 }
 #neat-menu ul ul li:hover a {
     background-color: #ffffff;
-
-
-}]]></b:skin>
+}
+]]></b:skin>
 
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1160px'/>
@@ -2349,19 +2348,6 @@ ol.linenums {
     </b:if>
     <b:include name='quickedit'/>
   </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='HTML1' locked='false' title='Like Us' type='HTML'>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/><b:section-contents id='footer-2-3'/></html>

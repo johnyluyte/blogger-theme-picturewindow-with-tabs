@@ -21,5 +21,7 @@ It is based on the default "Picture Window" template from [blogger](https://www.
   font-size: 90%;
 }
 
-Customized style of Google Code Prettify is just above </head>
+Customized style of **neat-menu** is just above `]]></b:skin>`
+
+Customized style of **Google Code Prettify** is just above `</head>`
 
