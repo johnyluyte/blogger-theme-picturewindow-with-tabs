@@ -570,6 +570,10 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.separator.color);
 }
+
+
+
+<!-- neatMenu CSS starts -->
 #neat-menu ul li:hover ul  {  /* Dropdown lists parent */
     height: auto;
     opacity: 1;
@@ -605,6 +609,8 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 #neat-menu ul ul li:hover a {
     background-color: #dddddd;
 }
+<!-- neatMenu CSS ends -->
+
 ]]></b:skin>
 
     <b:template-skin>
@@ -932,7 +938,7 @@ ol.linenums {
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
       <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
-        <b:widget id='HTML2' locked='false' title='Menu Drop-down' type='HTML'>
+        <b:widget id='HTML2' locked='false' title='Neat Menu' type='HTML'>
           <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>

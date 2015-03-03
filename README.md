@@ -11,7 +11,43 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
 
 
-## Modification Notes
+## Customized Neat-Menu
+
+Customized CSS **Neat-Menu** is just above `]]></b:skin>`, or you can search for: `<!-- neatMenu CSS starts -->`
+
+To modify items of neat-menu(e.g. add tabs, add dropdown lists), go to `Layout`, click `Neat Menu`, then edit HTML.
+
+```html
+<div id='contact-links'>
+    <div id='menu-container'>
+        <nav id='neat-menu'>
+          <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='linkToYourPage'>My Page</a></li>
+            <li><a>Dropdown lists ▼</a>
+                <ul>
+                    <li><a href='#'>Item 1</a></li>
+                    <li><a href='#'>Item 2</a></li>
+                    <li><a href='#'>Item 3</a></li>
+                </ul>
+            </li>
+            <li><a href='#'>Another Page</a></li>
+          </ul>
+        </nav>
+    </div>
+</div>
+```
+
+
+## Customized Google Code Prettify
+
+Customized **Google Code Prettify** can be located near:
+
+- `<!-- googleCodePrettify CSS starts -->`
+- `<!-- googleCodePrettify javascript starts -->`
+
+
+## Other Modification Notes
 
 .post-body {
   font-size: 130%;
@@ -20,8 +56,3 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 .content-outer{
   font-size: 90%;
 }
-
-Customized style of **neat-menu** is just above `]]></b:skin>`
-
-Customized style of **Google Code Prettify** is just above `</head>`
-
