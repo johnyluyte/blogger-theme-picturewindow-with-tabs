@@ -862,13 +862,15 @@ head.appendChild(script);
 body{
  font-family: &#39;Microsoft YaHei&#39;, &#39;Microsoft JhengHei&#39;, &#39;Arial&#39;, sans-serif !important;
 }
-/*程式碼高亮設定*/
+
+
+  <!-- googleCodePrettify CSS starts -->
 /*main box*/
 .pre-highborder{
  border: 1px solid #ff0000;
  padding: 3px 3px 3px 0;
 }
-pre.prettyprint, code.prettyprint {
+pre.prettyprint {
  border-radius: 8px;
  -moz-border-radius: 8px;
  -webkit-border-radius: 8px;
@@ -877,6 +879,17 @@ pre.prettyprint, code.prettyprint {
  box-shadow: 0 0 5px #999;
  -moz-box-shadow: 0 0 5px #999;
  -webkit-box-shadow: 0 0 5px #999;
+}
+code.prettyprintinline {  /* pre.prettyprint, */
+ border-radius: 4px;
+ -moz-border-radius: 4px;
+ -webkit-border-radius: 4px;
+ padding: 0px 3px;
+ margin: 3px;
+ background-color: #ffeaea !important;
+ box-shadow: 0 0 3px #999;
+ -moz-box-shadow: 0 0 3px #999;
+ -webkit-box-shadow: 0 0 3px #999;
 }
 /*font*/
 pre span, code span {
@@ -904,6 +917,7 @@ ol.linenums {
  background-color: #eee;
  margin-left: 6px;
 }
+  <!-- googleCodePrettify CSS starts -->
 
 </style>
 
@@ -2051,13 +2065,20 @@ ol.linenums {
   </script>
 
 
+  <!-- googleCodePrettify javascript starts -->
     <script src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;lang=basic&amp;lang=css&amp;lang=sql'/>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js'/>
     <script type='text/javascript'>
     $(&quot;pre&quot;).each(function(){
         $(this).addClass(&#39;prettyprint&#39;).addClass(&#39;linenums&#39;);
     });
+    $(&quot;code&quot;).each(function(){
+        if(!$(this).closest(&quot;pre&quot;).length){
+            $(this).addClass(&#39;prettyprintinline&#39;);
+        }
+    });
     </script>
+  <!-- googleCodePrettify javascript ends -->
 </body>
 
 <macro:includable id='sections' var='col'>
