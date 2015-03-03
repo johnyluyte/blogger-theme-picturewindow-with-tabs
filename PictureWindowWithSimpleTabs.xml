@@ -603,7 +603,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
     background-color: #777777;
 }
 #neat-menu ul ul li:hover a {
-    background-color: #ffffff;
+    background-color: #dddddd;
 }
 ]]></b:skin>
 
@@ -692,7 +692,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0752936053153705018573\46blogName\75Coding+%E3%81%8C%E3%81%B4%E3%82%87%E3%82%93%E3%81%B4%E3%82%87%E3%82%93%E3%81%99%E3%82%8B\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blogger.chunnorris.net/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blogger.chunnorris.net/\46vt\75-7364013236346511086&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0752936053153705018573\46blogName\75Coding+%E3%81%8C%E3%81%B4%E3%82%87%E3%82%93%E3%81%B4%E3%82%87%E3%82%93%E3%81%99%E3%82%8B\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.chunnorris.net/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.chunnorris.net/\46vt\75-722142574918983773&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
@@ -881,7 +881,7 @@ pre.prettyprint, code.prettyprint {
 /*font*/
 pre span, code span {
  /*font-family: &#39;monospace&#39;, sans-serif !important;*/
- font-size: 80%;
+ font-size: 100%;
  word-wrap: normal;
 }
 /*each line*/
@@ -2100,80 +2100,18 @@ ol.linenums {
 </macro:includable>
 
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='CustomSearch1' locked='false' title='Search This Blog' type='CustomSearch'>
+  <b:widget id='HTML1' locked='false' title='Search This Blog' type='HTML'>
     <b:includable id='main'>
-    <!-- only display title if it's non-empty -->
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
 
-    <div class='widget-content'>
-      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-        <span class='cse-status'><data:loadingMsg/></span>
-      </div>
-    </div>
-
-    <!-- override gsearch.css -->
-    <style type='text/css'>
-      #uds-searchControl .gs-result .gs-title,
-      #uds-searchControl .gs-result .gs-title *,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results * {
-        color:<data:linkColor/>;
-      }
-
-      #uds-searchControl .gs-result .gs-title a:visited,
-      #uds-searchControl .gs-result .gs-title a:visited * {
-        color:<data:visitedLinkColor/>;
-      }
-
-      #uds-searchControl .gs-relativePublishedDate,
-      #uds-searchControl .gs-publishedDate {
-        color: <data:dateColor/>;
-      }
-
-      #uds-searchControl .gs-result a.gs-visibleUrl,
-      #uds-searchControl .gs-result .gs-visibleUrl {
-        color: <data:urlColor/>;
-      }
-
-      #uds-searchControl .gsc-results {
-        border-color: <data:borderColor/>;
-        background-color: <data:backgroundColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhActive {
-        border-color: <data:borderColor/>;
-        border-top-color: <data:activeBorderColor/>;
-        background-color: <data:backgroundColor/>;
-        color: <data:textColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhInactive {
-        border-color: <data:borderColor/>;
-        background-color: transparent;
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchClearResults {
-        border-color: <data:borderColor/>;
-      }
-
-      #uds-searchClearResults:hover {
-        border-color: <data:activeBorderColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-page {
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-current-page {
-        color: <data:textColor/>;
-      }
-    </style>
-
-    <b:include name='quickedit'/>
-  </b:includable>
+  <b:include name='quickedit'/>
+</b:includable>
   </b:widget>
   <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
     <b:includable id='main'>
@@ -2350,4 +2288,25 @@ ol.linenums {
   </div>
 </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/><b:section-contents id='footer-2-3'/></html>
+</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
+  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
+    <b:includable id='main'>
+  <b:if cond='data:title'><h2><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <!-- Content is going to be visible when data will be fetched from server. -->
+    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
+      <!-- Counter and image will be injected later via AJAX call. -->
+      <b:if cond='data:showSparkline'>
+        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
+      </b:if>
+      <b:if cond='data:showGraphicalCounter'>
+        <span class='counter-wrapper graph-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
+      <b:else/>
+        <span class='counter-wrapper text-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
+      </b:if>
+      <b:include name='quickedit'/>
+    </div>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-2-2'/><b:section-contents id='footer-2-3'/></html>
