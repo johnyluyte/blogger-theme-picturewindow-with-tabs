@@ -354,8 +354,17 @@ h4 {
 
 /* Posts
 ----------------------------------------------- */
+.post-body h1 {
+}
+.post-body h2 {
+  padding-top: 15px;
+}
+.post-body h3 {
+  padding-top: 10px;
+}
+
 h3.post-title {
-  font-size: 200%;
+  font-size: 180%;
   color: #669999;
   margin: 0;
 /* font: $(post.title.font); */
@@ -573,7 +582,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 
 
 
-<!-- neatMenu CSS starts -->
+/* neatMenu CSS starts */
 #neat-menu ul li:hover ul  {  /* Dropdown lists parent */
     height: auto;
     opacity: 1;
@@ -609,7 +618,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 #neat-menu ul ul li:hover a {
     background-color: #dddddd;
 }
-<!-- neatMenu CSS ends -->
+/* neatMenu CSS ends */
 
 ]]></b:skin>
 
@@ -870,7 +879,7 @@ body{
 }
 
 
-  <!-- googleCodePrettify CSS starts -->
+/* googleCodePrettify CSS starts */
 /*main box*/
 .pre-highborder{
  border: 1px solid #ff0000;
@@ -923,7 +932,7 @@ ol.linenums {
  background-color: #eee;
  margin-left: 6px;
 }
-  <!-- googleCodePrettify CSS starts -->
+/* googleCodePrettify CSS ends */
 
 </style>
 
