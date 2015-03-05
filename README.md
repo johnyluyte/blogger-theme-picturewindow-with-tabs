@@ -8,6 +8,8 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 
 - Added [google-code-prettify](https://code.google.com/p/google-code-prettify) code highlight, and a customized CSS snippet modified from [this blog](http://eric0806.blogspot.tw/2014/04/blogger-google-code-prettify.html).
 
+- Added customized CSS(Table, Blockquote) modified from [Bootstrap](http://getbootstrap.com/).
+
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
 
 
@@ -51,7 +53,7 @@ Customized **Google Code Prettify** can be located under:
 ![](demo/google-code-prettify.png)
 
 
-## Customized Bootstrap-Style Table
+## Customized Bootstrap-Style CSS
 
 Customized **Bootstrap-Style Table** can be located under:
 
@@ -61,6 +63,7 @@ It uses the style from `bootstrap-table.css` in this repository.
 
 ![](demo/bootstrap-table.png)
 
+![](demo/blockquote.png)
 
 ## Other Modification Notes
 
