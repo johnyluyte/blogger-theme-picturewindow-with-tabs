@@ -1,6 +1,6 @@
 ## What is this?
 
-This is the theme for my [blog](http://blogger.chunnorris.net/).
+This is the theme for my [blog](http://blog.chunnorris.net/).
 
 It is based on the default "Picture Window" template from [blogger](https://www.blogger.com/home), with some modification:
 
@@ -9,11 +9,6 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 - Added [google-code-prettify](https://code.google.com/p/google-code-prettify) code highlight, and a customized CSS snippet modified from [this blog](http://eric0806.blogspot.tw/2014/04/blogger-google-code-prettify.html).
 
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
-
-
-## TODO
-
-附上各圖片 demo
 
 
 ## Customized Neat-Menu
@@ -43,6 +38,8 @@ To modify items of neat-menu(e.g. add tabs, add dropdown lists), go to `Layout`,
 </div>
 ```
 
+![](demo/neat-menu.png)
+
 
 ## Customized Google Code Prettify
 
@@ -50,6 +47,8 @@ Customized **Google Code Prettify** can be located under:
 
 - `<!-- googleCodePrettify CSS starts -->`
 - `<!-- googleCodePrettify javascript starts -->`
+
+![](demo/google-code-prettify.png)
 
 
 ## Customized Bootstrap-Style Table
@@ -59,6 +58,8 @@ Customized **Bootstrap-Style Table** can be located under:
 - `<!-- bootstrapTable javascript starts -->`
 
 It uses the style from `bootstrap-table.css` in this repository.
+
+![](demo/bootstrap-table.png)
 
 
 ## Other Modification Notes
