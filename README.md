@@ -11,6 +11,11 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
 
 
+## TODO
+
+附上各圖片 demo
+
+
 ## Customized Neat-Menu
 
 Customized CSS **Neat-Menu** is just above `]]></b:skin>`, or you can search for: `<!-- neatMenu CSS starts -->`
@@ -41,10 +46,19 @@ To modify items of neat-menu(e.g. add tabs, add dropdown lists), go to `Layout`,
 
 ## Customized Google Code Prettify
 
-Customized **Google Code Prettify** can be located near:
+Customized **Google Code Prettify** can be located under:
 
 - `<!-- googleCodePrettify CSS starts -->`
 - `<!-- googleCodePrettify javascript starts -->`
+
+
+## Customized Bootstrap-Style Table
+
+Customized **Bootstrap-Style Table** can be located under:
+
+- `<!-- bootstrapTable javascript starts -->`
+
+It uses the style from `bootstrap-table.css` in this repository.
 
 
 ## Other Modification Notes

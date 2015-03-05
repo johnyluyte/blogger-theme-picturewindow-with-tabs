@@ -2094,6 +2094,16 @@ ol.linenums {
     });
     </script>
   <!-- googleCodePrettify javascript ends -->
+  <!-- bootstrapTable javascript starts -->
+    <link href='https://dl.dropboxusercontent.com/u/34354811/blogger/css/bootstrap-table.css' rel='stylesheet' type='text/css'/>
+    <script type='text/javascript'>
+    $(&quot;table&quot;).each(function(){
+        $(this).addClass(&#39;table&#39;);
+        $(this).addClass(&#39;table-bordered&#39;);
+        $(this).addClass(&#39;table-striped&#39;);
+    });
+    </script>
+  <!-- bootstrapTable javascript ends -->
 </body>
 
 <macro:includable id='sections' var='col'>
