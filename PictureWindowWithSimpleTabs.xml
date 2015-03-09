@@ -2097,7 +2097,7 @@ ol.linenums {
   <!-- bootstrapTable javascript starts -->
     <link href='https://dl.dropboxusercontent.com/u/34354811/blogger/css/bootstrap-table.css' rel='stylesheet' type='text/css'/>
     <script type='text/javascript'>
-    $(&quot;table&quot;).each(function(){
+    $(&quot;.post-body &gt; table&quot;).each(function(){
         $(this).addClass(&#39;table&#39;);
         $(this).addClass(&#39;table-bordered&#39;);
         $(this).addClass(&#39;table-striped&#39;);
@@ -2334,7 +2334,48 @@ ol.linenums {
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='HTML6' locked='false' title='CC BY 3.0' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
 </b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
+  <b:widget id='HTML4' locked='false' title='Attribution' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-2-2'>
+  <b:widget id='HTML5' locked='false' title='Free Culture License' type='HTML'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+</b:section-contents><b:section-contents id='footer-2-3'>
   <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
     <b:includable id='main'>
   <b:if cond='data:title'><h2><data:title/></h2></b:if>
@@ -2355,4 +2396,4 @@ ol.linenums {
   </div>
 </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='footer-2-2'/><b:section-contents id='footer-2-3'/></html>
+</b:section-contents></html>
