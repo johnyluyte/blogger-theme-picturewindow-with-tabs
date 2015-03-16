@@ -1,6 +1,6 @@
 ## What is this?
 
-This is the theme for my [blog](http://blog.chunnorris.net/).
+This is the theme for my [blog](http://blog.chunnorris.cc/).
 
 It is based on the default "Picture Window" template from [blogger](https://www.blogger.com/home), with some modification:
 
