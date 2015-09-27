@@ -2130,6 +2130,16 @@ ol.linenums {
     </script>
   <!-- bootstrapTable javascript ends -->
 
+  <!-- http://stackoverflow.com/questions/4425198/markdown-target-blank -->
+  <!-- Set markdown link target=&#8220;_blank&#8221; javascript starts -->
+    <script type='text/javascript'>
+    // 將所有在 .post-body.entry-content 文章內的連結都設定為 target = _blank
+    $(&quot;.post-body.entry-content a&quot;).attr(&#39;target&#39;, &#39;_blank&#39;);
+    // 但是目錄 TOC 的連結不要
+    $(&quot;.toc a&quot;).attr(&#39;target&#39;, &#39;&#39;);
+    </script>
+  <!-- Set markdown link target=&#8220;_blank&#8221; javascript ends -->
+
 <!-- 相關文章2 start -->
 <script type='text/javascript'>
 //<![CDATA[

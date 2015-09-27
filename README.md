@@ -12,6 +12,8 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 
 - Added related articles widget from [WFU blog](http://www.wfublog.com/2014/05/blogger-related-posts-2-custom-thumbnail.html).
 
+- `<a>` links in posts will be opened at new tabs. TOCs will not be effected. As described in [this article](http://stackoverflow.com/questions/4425198/markdown-target-blank).
+
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
 
 
@@ -72,6 +74,15 @@ It uses the style from `bootstrap-table.css` in this repository.
 CSS: search for `/* 相關文章2 */`
 
 js: search for `<!-- 相關文章2 start -->`
+
+## Open links in new tabs
+
+```javascript
+    // 將所有在 .post-body.entry-content 文章內的連結都設定為 target = _blank
+    $(&quot;.post-body.entry-content a&quot;).attr(&#39;target&#39;, &#39;_blank&#39;);
+    // 但是目錄 TOC 的連結不要
+    $(&quot;.toc a&quot;).attr(&#39;target&#39;, &#39;&#39;);
+```
 
 ## Other Modification Notes
 
