@@ -10,6 +10,8 @@ It is based on the default "Picture Window" template from [blogger](https://www.
 
 - Added customized CSS(Table, Blockquote) modified from [Bootstrap](http://getbootstrap.com/).
 
+- Added related articles widget from [WFU blog](http://www.wfublog.com/2014/05/blogger-related-posts-2-custom-thumbnail.html).
+
 - The width, layout, font-size, font-family, and others have also been modified based on my own preference.
 
 
@@ -64,6 +66,12 @@ It uses the style from `bootstrap-table.css` in this repository.
 ![](demo/bootstrap-table.png)
 
 ![](demo/blockquote.png)
+
+## Related Articles Widget
+
+CSS: search for `/* 相關文章2 */`
+
+js: search for `<!-- 相關文章2 start -->`
 
 ## Other Modification Notes
 

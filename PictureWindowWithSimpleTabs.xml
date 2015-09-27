@@ -264,7 +264,7 @@ a:hover {
 .tabs-inner .widget li a {
   display: inline-block;
 
-  padding: .5em 1em;
+  padding: .5em .75em;
   margin-$endSide: $(tabs.spacing);
 
   color: $(tabs.text.color);
@@ -582,6 +582,10 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 }
 
 
+/* iFrame CSS starts */
+iframe{
+    border: None;
+}
 
 /* neatMenu CSS starts */
 #neat-menu ul li:hover ul  {  /* Dropdown lists parent */
@@ -624,7 +628,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 ]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1160px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1260px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='260px'/>
 
@@ -688,6 +692,53 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
       ]]>
     </b:template-skin>
     <b:include data='blog' name='google-analytics'/>
+<style>
+/* 相關文章2 */
+.rltPost2_bar { /* 標題欄 */
+}
+.rltPost2_caption { /* 標題文字 */
+font-size: 16px;
+font-weight: bold;
+line-height: 20px;
+}
+.rltPost2_allPost { /* 相關文章區塊 */
+display: table-row;
+}
+.rltPost2_post { /* 個別文章區塊 */
+padding: 5px;
+display: table-cell;
+}
+.rltPost2_post:hover {
+background: #ecf5ff;
+text-decoration: none;
+}
+.rltPost2_post:hover .rltPost2_picFrame {
+border: 1px solid transparent;
+}
+.rltPost2_picFrame{ /* 圖片外框 */
+padding: 2px;
+border: 1px solid #ddd;
+}
+.rltPost2_pic { /* 圖片 */
+border-radius: 5px;
+}
+.rltPost2_title { /* 文章標題 */
+font-size: 13px;
+font-weight: bold;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.rltPost2_more { /* 更多文章按鈕 */
+vertical-align: middle;
+display: table-cell;
+font-size: 60px;
+}
+.rltPost2_more:hover {
+background: #ecf5ff;
+}
+</style>
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
@@ -708,7 +759,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0752936053153705018573\46blogName\75Coding+%E3%81%8C%E3%81%B4%E3%82%87%E3%82%93%E3%81%B4%E3%82%87%E3%82%93%E3%81%99%E3%82%8B\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.chunnorris.cc/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.chunnorris.cc/\46vt\75-973712081499868469&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0752936053153705018573\46blogName\75Chun+Norris+Facts\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.chunnorris.cc/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.chunnorris.cc/\46vt\75-973712081499868469&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
@@ -793,7 +844,7 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='false' title='Coding がぴょんぴょんする (Header)' type='Header'>
+        <b:widget id='Header1' locked='false' title='Chun Norris Facts (Header)' type='Header'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -807,24 +858,24 @@ head.appendChild(script);
       user is not using shrink to fit then we expand the header.
       -->
       <b:if cond='data:mobile'>
-          <div id='header-inner'>
-            <div class='titlewrapper' style='background: transparent'>
-              <h1 class='title' style='background: transparent; border-width: 0px'>
-                <b:include name='title'/>
-              </h1>
-            </div>
-            <b:include name='description'/>
+        <div id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
           </div>
-        <b:else/>
-          <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-            <div class='titlewrapper' style='background: transparent'>
-              <h1 class='title' style='background: transparent; border-width: 0px'>
-                <b:include name='title'/>
-              </h1>
-            </div>
-            <b:include name='description'/>
+          <b:include name='description'/>
+        </div>
+      <b:else/>
+        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+          <div class='titlewrapper' style='background: transparent'>
+            <h1 class='title' style='background: transparent; border-width: 0px'>
+              <b:include name='title'/>
+            </h1>
           </div>
-        </b:if>
+          <b:include name='description'/>
+        </div>
+      </b:if>
     <b:else/>
       <!--Show the image only-->
       <div id='header-inner'>
@@ -876,7 +927,7 @@ head.appendChild(script);
 
 <style type='text/css'>
 body{
- font-family: &#39;Microsoft JhengHei&#39;, &#39;Microsoft YaHei&#39;, &#39;Arial&#39;, sans-serif !important;
+ font-family: &#39;Helvetica&#39;, &#39;Microsoft YaHei&#39;, &#39;Microsoft JhengHei&#39;, sans-serif !important;
 }
 
 .column-right-inner{
@@ -1057,7 +1108,7 @@ ol.linenums {
           <b:section class='main' id='main' showaddelement='no'>
             <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
               <b:includable id='main' var='top'>
-  <b:if cond='data:mobile == &quot;false&quot;'>
+  <b:if cond='!data:mobile'>
     <!-- posts -->
     <div class='blog-posts hfeed'>
 
@@ -1065,7 +1116,7 @@ ol.linenums {
 
       <data:defaultAdStart/>
       <b:loop values='data:posts' var='post'>
-        <b:if cond='data:post.isDateStart and data:post.isFirstPost == &quot;false&quot;'>
+        <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
           &lt;/div&gt;&lt;/div&gt;
         </b:if>
         <b:if cond='data:post.isDateStart'>
@@ -1079,7 +1130,7 @@ ol.linenums {
         </b:if>
         <div class='post-outer'>
           <b:include data='post' name='post'/>
-          <b:include cond='data:blog.pageType == &quot;static_page&quot; or data:blog.pageType == &quot;item&quot;' data='post' name='comment_picker'/>
+          <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
         </div>
         <b:if cond='data:post.includeAd'>
           <b:if cond='data:post.isFirstPost'>
@@ -1197,12 +1248,10 @@ ol.linenums {
               <b:includable id='comment_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
     <b:include data='post' name='iframe_comments'/>
+  <b:elseif cond='data:post.showThreadedComments'/>
+    <b:include data='post' name='threaded_comments'/>
   <b:else/>
-    <b:if cond='data:post.showThreadedComments'>
-      <b:include data='post' name='threaded_comments'/>
-    <b:else/>
-      <b:include data='post' name='comments'/>
-    </b:if>
+    <b:include data='post' name='comments'/>
   </b:if>
 </b:includable>
               <b:includable id='comments' var='post'>
@@ -1297,12 +1346,9 @@ ol.linenums {
           <b:else/>
             <data:post.noNewCommentsText/>
           </b:if>
-        <b:else/>
-          <b:if cond='data:post.allowComments'>
-            <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-          </b:if>
+        <b:elseif cond='data:post.allowComments'/>
+          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
         </b:if>
-
       </p>
     </b:if>
     <b:if cond='data:showCmtPopup'>
@@ -1457,12 +1503,10 @@ ol.linenums {
             <h3 class='post-title entry-title' itemprop='name'>
               <b:if cond='data:post.link'>
                 <a expr:href='data:post.link'><data:post.title/></a>
+              <b:elseif cond='data:post.url and data:blog.url != data:post.url'/>
+                <a expr:href='data:post.url'><data:post.title/></a>
               <b:else/>
-                <b:if cond='data:post.url and data:blog.url != data:post.url'>
-                  <a expr:href='data:post.url'><data:post.title/></a>
-                <b:else/>
-                  <data:post.title/>
-                </b:if>
+                <data:post.title/>
               </b:if>
             </h3>
           </b:if>
@@ -1506,7 +1550,7 @@ ol.linenums {
               </span>
 
               <span class='post-comment-link'>
-                <b:include cond='data:blog.pageType != &quot;item&quot;                                  and data:blog.pageType != &quot;static_page&quot;                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
+                <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
               </span>
             </div>
 
@@ -1524,7 +1568,7 @@ ol.linenums {
           </div>
         </div>
 
-        <b:include cond='data:blog.pageType == &quot;static_page&quot; or data:blog.pageType == &quot;item&quot;' data='post' name='comment_picker'/>
+        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
       </div>
     </div>
   </div>
@@ -1694,7 +1738,7 @@ ol.linenums {
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+        <img alt='' class='icon-action' height='18' src='//img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
       </a>
     </span>
   </b:if>
@@ -1865,6 +1909,7 @@ ol.linenums {
           }
         }
         if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
           document.getElementById(domId).insertBefore(replybox, null);
           replybox.src = replyUrlParts[0]
               + (commentId ? '&parentID=' + commentId : '')
@@ -2084,6 +2129,33 @@ ol.linenums {
     });
     </script>
   <!-- bootstrapTable javascript ends -->
+
+<!-- 相關文章2 start -->
+<script type='text/javascript'>
+//<![CDATA[
+var rltPost2 = {
+show : 5, // 相關文章的數量
+width : 150, // 縮圖寬度(px值)
+height : 80, // 縮圖高度(px值)
+cut : "Y", // 縮圖是否裁切, 預設 "Y" 效果較佳; 若改為 "N" 則不裁切, 圖片會變形為設定的尺寸
+caption : "相關文章推薦 :", // 大標題字樣
+moreLogo : "", // 更多相關文章圖示字元, 也可使用 http 開頭的圖片網址
+noImage : "https://dl.dropboxusercontent.com/u/34354811/blogger/css/blogger.jpg", //無縮圖的替代圖片
+location : ".post-footer-line-2", // 相關文章顯示的位置
+//]]>
+postUrl : &quot;<data:blog.canonicalUrl/>&quot;
+};
+//<![CDATA[
+(function () {
+$(".post-footer-line-2").prepend('<hr><br><br>');
+var url = "https://dl.dropboxusercontent.com/u/34354811/blogger/css/related-post-2-140516-min.js",
+script = document.createElement("script");
+script.src = url;
+document.documentElement.firstChild.appendChild(script);
+} )();
+//]]>
+</script>
+<!-- 相關文章2 end, designed by WFU BLOG-->
 </body>
 
 <macro:includable id='sections' var='col'>
@@ -2141,21 +2213,15 @@ ol.linenums {
   </b:widget>
   <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
     <b:includable id='main'>
-  <b:if cond='data:title'>
+  <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
   </b:if>
   <div class='widget-content'>
   <div id='ArchiveList'>
   <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-    <b:if cond='data:style == &quot;HIERARCHY&quot;'>
-     <b:include data='data' name='interval'/>
-    </b:if>
-    <b:if cond='data:style == &quot;FLAT&quot;'>
-      <b:include data='data' name='flat'/>
-    </b:if>
-    <b:if cond='data:style == &quot;MENU&quot;'>
-      <b:include data='data' name='menu'/>
-    </b:if>
+    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
   </div>
   </div>
   <b:include name='quickedit'/>
@@ -2171,20 +2237,18 @@ ol.linenums {
   </ul>
 </b:includable>
     <b:includable id='interval' var='intervalData'>
-  <b:loop values='data:intervalData' var='i'>
-      <ul class='hierarchy'>
-        <li expr:class='&quot;archivedate &quot; + data:i.expclass'>
-          <b:include data='i' name='toggle'/>
-          <a class='post-count-link' expr:href='data:i.url'><data:i.name/></a>
-            <span class='post-count' dir='ltr'>(<data:i.post-count/>)</span>
-          <b:if cond='data:i.data'>
-            <b:include data='i.data' name='interval'/>
-          </b:if>
-          <b:if cond='data:i.posts'>
-            <b:include data='i.posts' name='posts'/>
-          </b:if>
-        </li>
-      </ul>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
   </b:loop>
 </b:includable>
     <b:includable id='menu' var='data'>
@@ -2197,32 +2261,26 @@ ol.linenums {
 </b:includable>
     <b:includable id='posts' var='posts'>
   <ul class='posts'>
-    <b:loop values='data:posts' var='i'>
-      <li><a expr:href='data:i.url'><data:i.title/></a></li>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
     </b:loop>
   </ul>
 </b:includable>
     <b:includable id='toggle' var='interval'>
-  <b:if cond='data:interval.toggleId'>
-  <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy toggle-open'>&#9660;&#160;</span>
-    </a>
-  <b:else/>
-    <a class='toggle' href='javascript:void(0)'>
-      <span class='zippy'>
-        <b:if cond='data:blog.languageDirection == &quot;rtl&quot;'>
-          &#9668;&#160;
-        <b:else/>
-          &#9658;&#160;
-        </b:if>
-      </span>
-    </a>
-  </b:if>
- </b:if>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML7' locked='false' title='推薦文章' type='HTML'>
+  <b:widget id='HTML7' locked='false' title='推薦閱讀' type='HTML'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2235,79 +2293,26 @@ ol.linenums {
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
-    <b:includable id='main'>
-  <b:if cond='data:title'><h2><data:title/></h2></b:if>
-  <div class='widget-content popular-posts'>
-    <ul>
-      <b:loop values='data:posts' var='post'>
-      <li>
-        <b:if cond='data:showThumbnails == &quot;false&quot;'>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (1) No snippet/thumbnail -->
-            <a expr:href='data:post.href'><data:post.title/></a>
-          <b:else/>
-            <!-- (2) Show only snippets -->
-            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            <div class='item-snippet'><data:post.snippet/></div>
-          </b:if>
-        <b:else/>
-          <b:if cond='data:showSnippets == &quot;false&quot;'>
-            <!-- (3) Show only thumbnails -->
-            <div class='item-thumbnail-only'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            </div>
-            <div style='clear: both;'/>
-          <b:else/>
-            <!-- (4) Show snippets and thumbnails -->
-            <div class='item-content'>
-              <b:if cond='data:post.thumbnail'>
-                <div class='item-thumbnail'>
-                  <a expr:href='data:post.href' target='_blank'>
-                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-                  </a>
-                </div>
-              </b:if>
-              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-              <div class='item-snippet'><data:post.snippet/></div>
-            </div>
-            <div style='clear: both;'/>
-          </b:if>
-        </b:if>
-      </li>
-      </b:loop>
-    </ul>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
   <b:widget id='Label1' locked='false' title='Labels' type='Label'>
     <b:includable id='main'>
-  <b:if cond='data:title'>
+  <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
   </b:if>
   <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
     <b:if cond='data:display == &quot;list&quot;'>
       <ul>
-      <b:loop values='data:labels' var='label'>
-        <li>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </li>
-      </b:loop>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
       </ul>
     <b:else/>
       <b:loop values='data:labels' var='label'>
@@ -2371,7 +2376,7 @@ ol.linenums {
 </b:section-contents><b:section-contents id='footer-2-3'>
   <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
     <b:includable id='main'>
-  <b:if cond='data:title'><h2><data:title/></h2></b:if>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
     <!-- Content is going to be visible when data will be fetched from server. -->
     <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
@@ -2379,11 +2384,8 @@ ol.linenums {
       <b:if cond='data:showSparkline'>
         <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
       </b:if>
-      <b:if cond='data:showGraphicalCounter'>
-        <span class='counter-wrapper graph-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
-      <b:else/>
-        <span class='counter-wrapper text-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
-      </b:if>
+      <span expr:class='&quot;counter-wrapper &quot; + (data:showGraphicalCounter ? &quot;graph-counter-wrapper&quot; : &quot;text-counter-wrapper&quot;)' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'>
+      </span>
       <b:include name='quickedit'/>
     </div>
   </div>
