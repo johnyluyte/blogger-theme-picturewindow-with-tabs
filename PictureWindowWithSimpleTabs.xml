@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
+    <script data-sumo-site-id='d7a1bbb1b48d74797c419b670df92ef311ef012077dab4b692c3e362b1b46d3c' src='//load.sumome.com/'/>
     <b:if cond='data:blog.isMobile'>
       <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
     <b:else/>
@@ -628,7 +629,7 @@ iframe{
 ]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1260px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1240px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='260px'/>
 
@@ -742,7 +743,7 @@ background: #ecf5ff;
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
-    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
+    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' visible='true'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -756,16 +757,16 @@ background: #ecf5ff;
 &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
-          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
-            gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0752936053153705018573\46blogName\75Chun+Norris+Facts\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75LIGHT\46layoutType\75LAYOUTS\46searchRoot\75http://blog.chunnorris.cc/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.chunnorris.cc/\46vt\75-973712081499868469&#39;,
-                where: document.getElementById(&quot;navbar-iframe-container&quot;),
-                id: &quot;navbar-iframe&quot;
-            });
-          }
-        });
-      &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+      gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+        if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d2936053153705018573\x26blogName\x3dChun+Norris+Facts\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttp://blog.chunnorris.cc/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttp://blog.chunnorris.cc/\x26vt\x3d-973712081499868469&#39;,
+              where: document.getElementById(&quot;navbar-iframe-container&quot;),
+              id: &quot;navbar-iframe&quot;
+          });
+        }
+      });
+    &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
 (function() {
 var script = document.createElement(&#39;script&#39;);
 script.type = &#39;text/javascript&#39;;
@@ -844,7 +845,7 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='false' title='Chun Norris Facts (Header)' type='Header'>
+        <b:widget id='Header1' locked='false' title='Chun Norris Facts (Header)' type='Header' visible='true'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -955,7 +956,7 @@ body{
  border: 1px solid #ff0000;
  padding: 3px 3px 3px 0;
 }
-pre.prettyprint {
+pre.prettyprint {  
  border-radius: 8px;
  -moz-border-radius: 8px;
  -webkit-border-radius: 8px;
@@ -1017,7 +1018,7 @@ ol.linenums {
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
       <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
-        <b:widget id='HTML2' locked='false' title='Neat Menu' type='HTML'>
+        <b:widget id='HTML2' locked='false' title='Neat Menu' type='HTML' visible='true'>
           <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1106,7 +1107,7 @@ ol.linenums {
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' showaddelement='no'>
-            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' visible='true'>
               <b:includable id='main' var='top'>
   <b:if cond='!data:mobile'>
     <!-- posts -->
@@ -1114,7 +1115,6 @@ ol.linenums {
 
       <b:include data='top' name='status-message'/>
 
-      <data:defaultAdStart/>
       <b:loop values='data:posts' var='post'>
         <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
           &lt;/div&gt;&lt;/div&gt;
@@ -1132,22 +1132,17 @@ ol.linenums {
           <b:include data='post' name='post'/>
           <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
         </div>
+
+        <!-- Ad -->
         <b:if cond='data:post.includeAd'>
-          <b:if cond='data:post.isFirstPost'>
-            <data:defaultAdEnd/>
-          <b:else/>
-            <data:adEnd/>
-          </b:if>
           <div class='inline-ad'>
             <data:adCode/>
           </div>
-          <data:adStart/>
         </b:if>
       </b:loop>
       <b:if cond='data:numPosts != 0'>
         &lt;/div&gt;&lt;/div&gt;
       </b:if>
-      <data:adEnd/>
     </div>
 
     <!-- navigation -->
@@ -1160,8 +1155,8 @@ ol.linenums {
     <b:include name='mobile-main'/>
   </b:if>
 
-  <b:if cond='data:top.showDummy'>
-    <data:top.dummyBootstrap/>
+  <b:if cond='data:top.showPlusOne'>
+    <data:top.googlePlusBootstrap/>
   </b:if>
 
 </b:includable>
@@ -1207,13 +1202,13 @@ ol.linenums {
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <h4 id='comment-post-message'><data:postCommentMsg/></h4>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.friendConnectJs/>
     <data:post.cmtfpIframe/>
@@ -1237,7 +1232,7 @@ ol.linenums {
 </b:includable>
               <b:includable id='comment_count_picker' var='post'>
   <b:if cond='data:post.commentSource == 1'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.url.canonical.http'>
     </span>
   <b:else/>
     <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
@@ -1393,7 +1388,7 @@ ol.linenums {
 
   <b:if cond='data:post.allowIframeComments'>
     <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
-    <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
+    <div class='cmt_iframe_holder' expr:data-href='data:post.url.canonical' expr:data-viewtype='data:post.viewType'/>
 
     <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
       <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
@@ -1543,7 +1538,7 @@ ol.linenums {
                 <b:if cond='data:top.showTimestamp'>
                   <data:top.timestampLabel/>
                   <b:if cond='data:post.url'>
-                    <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
                     <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
                   </b:if>
                 </b:if>
@@ -1744,7 +1739,7 @@ ol.linenums {
   </b:if>
 </b:includable>
               <b:includable id='shareButtons' var='post'>
-  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if><b:if cond='data:top.showDummy'><div class='goog-inline-block dummy-container'><data:post.dummyTag/></div></b:if>
+  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if><b:if cond='data:top.showPlusOne'><div class='goog-inline-block google-plus-share-container'><data:post.googlePlusShareTag/></div></b:if>
 </b:includable>
               <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
@@ -1768,12 +1763,12 @@ ol.linenums {
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.friendConnectJs/>
     <data:post.cmtfpIframe/>
@@ -1999,6 +1994,45 @@ ol.linenums {
   </div>
 </b:includable>
             </b:widget>
+            <b:widget id='HTML3' locked='false' title='Disqus for Chunnorris' type='HTML' visible='true'>
+              <b:includable id='main'>
+            <script type='text/javascript'>
+                var disqus_shortname = &#39;chunnorris&#39;;
+                var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
+                if (!disqus_blogger_current_url.length) {
+                    disqus_blogger_current_url = &quot;<data:blog.url/>&quot;;
+                }
+                var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>&quot;;
+                var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>&quot;;
+            </script>
+            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                <style type='text/css'>
+                    #comments {display:none;}
+                </style>
+                <script type='text/javascript'>
+                    (function() {
+                        var bloggerjs = document.createElement(&#39;script&#39;);
+                        bloggerjs.type = &#39;text/javascript&#39;;
+                        bloggerjs.async = true;
+                        bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_item.js&#39;;
+                        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                    })();
+                </script>
+            </b:if>
+                <style type='text/css'>
+                    .post-comment-link { visibility: hidden; }
+                </style>
+                <script type='text/javascript'>
+                (function() {
+                    var bloggerjs = document.createElement(&#39;script&#39;);
+                    bloggerjs.type = &#39;text/javascript&#39;;
+                    bloggerjs.async = true;
+                    bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_index.js&#39;;
+                    (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                })();
+                </script>
+        </b:includable>
+            </b:widget>
           </b:section>
         </div>
         </div>
@@ -2061,7 +2095,7 @@ ol.linenums {
       </macro:include>
       <!-- outside of the include in order to lock Attribution widget -->
       <b:section class='foot' id='footer-3' showaddelement='no'>
-        <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
+        <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
           <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
       <div class='mobile-survey-link' style='text-align: center;'>
@@ -2208,7 +2242,7 @@ document.documentElement.firstChild.appendChild(script);
 </macro:includable>
 
 <b:section-contents id='sidebar-right-1'>
-  <b:widget id='HTML1' locked='false' title='Search This Blog' type='HTML'>
+  <b:widget id='HTML1' locked='false' title='Search This Blog' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2221,7 +2255,33 @@ document.documentElement.firstChild.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
+  <b:widget id='HTML10' locked='false' title='訂閱我的新書' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML8' locked='false' title='Feedly' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
@@ -2290,7 +2350,7 @@ document.documentElement.firstChild.appendChild(script);
   </a>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML7' locked='false' title='推薦閱讀' type='HTML'>
+  <b:widget id='HTML7' locked='false' title='精選文章' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2303,7 +2363,7 @@ document.documentElement.firstChild.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-  <b:widget id='Label1' locked='false' title='Labels' type='Label'>
+  <b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
@@ -2342,7 +2402,20 @@ document.documentElement.firstChild.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='HTML6' locked='false' title='CC BY 3.0' type='HTML'>
+  <b:widget id='HTML6' locked='false' title='CC BY 3.0' type='HTML' visible='true'>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML9' locked='false' title='AdSense' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2356,7 +2429,7 @@ document.documentElement.firstChild.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'>
-  <b:widget id='HTML4' locked='false' title='Attribution' type='HTML'>
+  <b:widget id='HTML4' locked='false' title='Attribution' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2370,7 +2443,7 @@ document.documentElement.firstChild.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-2'>
-  <b:widget id='HTML5' locked='false' title='Free Culture License' type='HTML'>
+  <b:widget id='HTML5' locked='false' title='Free Culture License' type='HTML' visible='true'>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -2384,7 +2457,7 @@ document.documentElement.firstChild.appendChild(script);
 </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-2-3'>
-  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats'>
+  <b:widget id='Stats1' locked='false' title='Total Pageviews' type='Stats' visible='true'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
